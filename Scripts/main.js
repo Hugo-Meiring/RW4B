@@ -246,7 +246,9 @@ $(document).ready(function(){
 	});
 
 	$(".modalPicture").click(function(){
-	$(".modalPicture").css({"opacity": "0", "pointer-events": "none"});
-	$("#modalImg").attr("src", "");
+		$(".modalPicture").css({"opacity": "0", "pointer-events": "none"});
+		$("#modalImg").attr("src", "");
 	});
+
+	
 });
