@@ -17,10 +17,10 @@ jQuery(function($) {'use strict';
 		var winTop      =   $(window).scrollTop();
 		var rangeTop    =   200;
 		var rangeBottom =   500;
-		// $('.navbar-collapse').find('.scroll a').each(function(){
-		// 	contentTop.push( $( $(this).attr('href') ).offset().top);
-		// 	contentBottom.push( $( $(this).attr('href') ).offset().top + $( $(this).attr('href') ).height() );
-		// })
+		$('.navbar-collapse').find('.scroll a').each(function(){
+			contentTop.push( $( $(this).attr('href') ).offset().top);
+			contentBottom.push( $( $(this).attr('href') ).offset().top + $( $(this).attr('href') ).height() );
+		})
 		$.each( contentTop, function(i){
 			if ( winTop > contentTop[i] - rangeTop ){
 				$('.navbar-collapse li.scroll')
@@ -232,17 +232,27 @@ jQuery(function($) {'use strict';
 
 });
 
+
 $(document).ready(function(){
 	$("img").click(function(){
 		$(".modalPicture").css({"opacity": "1", "pointer-events": "auto"});
 		var link = $(this).attr("src");
-		var start = link.lastIndexOf("/") + 1;
-		var end = link.length;
-		link = link.slice(start,end);
-		//link = '<img style="margin: auto;" class="img-responsive" alt="image" src="Gallery/' + link + '" />';
-		link = "Gallery/" + link;
+
+	 if (link.indexOf("Thumbnails") > -1) {
+			var start = link.lastIndexOf("/") + 1;
+			var end = link.length;
+			link = link.slice(start,end);
+			link = "Gallery/" + link;
+	 }
+		else if(link.indexOf("RvN") > -1) {
+			var start = link.lastIndexOf("/") + 1;
+			var end = link.length;
+			link = link.slice(start,end);
+			console.log(link);
+			link = "images/RvN/HighRes/" + link;
+		}
+
 		$("#modalImg").attr("src", link);
-		//document.getElementById("enlargedImg").innerHTML = link;
 	});
 
 	$(".modalPicture").click(function(){
@@ -250,5 +260,17 @@ $(document).ready(function(){
 		$("#modalImg").attr("src", "");
 	});
 
-	
+// Change RvN slider
+	var rvnNum = 1;
+
+	function nextPicture() {
+		var link = "images/RvN/" + rvnNum + ".jpg";
+		$("#rvnSlide").attr("src", link).fadeIn(500).delay(4000).fadeOut(500, nextPicture);
+		rvnNum += 1;
+		if (rvnNum == 5) rvnNum = 1;
+		//nextPicture().delay(2000);
+		//$(this).fadeOut(2000, nextPicture);
+
+	}
+	nextPicture();
 });

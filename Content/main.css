@@ -170,7 +170,8 @@ ul.nostyle i {
 }
 @media only screen and (min-width: 768px) {
   #main-menu.navbar-default {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(212, 244, 255, 0.9);
+
     -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
   }
@@ -983,4 +984,15 @@ ul.nostyle i {
 
 a {
  color: #225DAB;
+}
+
+#RvnDiv {
+  max-width: 100%;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+  margin-bottom: 50px;
 }
