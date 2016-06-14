@@ -236,13 +236,13 @@ $(document).ready(function(){
 	$("img").click(function(){
 		$(".modalPicture").css({"opacity": "1", "pointer-events": "auto"});
 		var link = $(this).attr("src");
-		var start = link.lastIndexOf("/") + 1;
-		var end = link.length;
-		link = link.slice(start,end);
-		//link = '<img style="margin: auto;" class="img-responsive" alt="image" src="Gallery/' + link + '" />';
-		link = "Gallery/" + link;
+		if (link.indexOf("maps") < 0) {
+			var start = link.lastIndexOf("/") + 1;
+			var end = link.length;
+			link = link.slice(start,end);
+			link = "Gallery/" + link;
+		}
 		$("#modalImg").attr("src", link);
-		//document.getElementById("enlargedImg").innerHTML = link;
 	});
 
 	$(".modalPicture").click(function(){
@@ -250,5 +250,5 @@ $(document).ready(function(){
 		$("#modalImg").attr("src", "");
 	});
 
-	
+
 });
