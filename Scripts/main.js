@@ -236,12 +236,21 @@ $(document).ready(function(){
 	$("img").click(function(){
 		$(".modalPicture").css({"opacity": "1", "pointer-events": "auto"});
 		var link = $(this).attr("src");
-		if (link.indexOf("maps") < 0) {
+
+	 if (link.indexOf("Thumbnails") > -1) {
 			var start = link.lastIndexOf("/") + 1;
 			var end = link.length;
 			link = link.slice(start,end);
 			link = "Gallery/" + link;
+	 }
+		else if(link.indexOf("RvN") > -1) {
+			var start = link.lastIndexOf("/") + 1;
+			var end = link.length;
+			link = link.slice(start,end);
+			console.log(link);
+			link = "images/RvN/HighRes/" + link;
 		}
+
 		$("#modalImg").attr("src", link);
 	});
 
@@ -250,5 +259,17 @@ $(document).ready(function(){
 		$("#modalImg").attr("src", "");
 	});
 
+// Change RvN slider
+	var rvnNum = 1;
 
+	function nextPicture() {
+		var link = "images/RvN/" + rvnNum + ".jpg";
+		$("#rvnSlide").attr("src", link).fadeIn(500).delay(4000).fadeOut(500, nextPicture);
+		rvnNum += 1;
+		if (rvnNum == 5) rvnNum = 1;
+		//nextPicture().delay(2000);
+		//$(this).fadeOut(2000, nextPicture);
+
+	}
+	nextPicture();
 });

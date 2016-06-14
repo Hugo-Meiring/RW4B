@@ -984,3 +984,7 @@ ul.nostyle i {
 a {
  color: #225DAB;
 }
+
+#RvnDiv {
+  max-width: 100%;
+}
