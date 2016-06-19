@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Essentials -->
+		<title> Run &#38; Walk for Bibles Marathon </title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!-- Bootstrap -> Responsive design -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<!-- Custom styling -->
+		<style>
+			body {
+				background-color: rgb(22, 22, 22);
+			}
+
+			.container-fluid {
+				text-align: center;
+				margin: auto;
+			}
+
+			.image {
+				display: inline-block;
+				width: 250px;
+				text-align: center;
+				margin: 15px;
+				border: 4px solid;
+				border-color: rgba(0, 0, 0, 0);
+			}
+
+			.image:hover {
+				border-color: rgb(43, 100, 255);
+			}
+
+			.modalPicture {
+				position: fixed;
+				font-family: Arial, Helvetica, sans-serif;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background: rgba(0, 0, 0, 0.8);
+				z-index: 5000;
+				opacity:0;
+				-webkit-transition: opacity 400ms ease-in;
+				-moz-transition: opacity 400ms ease-in;
+				transition: opacity 400ms ease-in;
+				pointer-events: none;
+			}
+
+			.modalPicture #enlargedImg {
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				margin: auto;
+				z-index: 9999;
+			}
+
+			.modalPicture:target{
+				opacity:1;
+				pointer-events: auto;
+			}
+
+			.modalPicture > div {
+/*				position: relative;
+				margin: auto;*/
+			}
+
+			#enlargedImg {
+/*				max-height: 100%;
+				max-width: 100%;*/
+/*				width: 100vw;
+				height: 100vh;*/
+			}
+
+			img {
+				max-width: 100vw;
+				max-height: 100vh;
+
+			}
+
+		</style>
+
+		<script>
+
+			function createGallery() {
+				var prefix = '<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_';
+				var suffix = '.jpg"/>';
+				var num;
+				var text = "";
+
+				for (var i = 0; i < 39; i++) {
+					if (i < 10)
+						num = "0" + i;
+					else
+						num = i;
+
+					text += prefix + num + suffix + "\n";
+				}
+
+				var gallery = document.getElementById("gallery");
+				var newContent = document.createElement('div');
+				newContent.innerHTML = text;
+
+				while (newContent.firstChild) {
+					gallery.appendChild(newContent.firstChild);
+				}
+
+				//console.log(text);
+				//gallery.innerHTML = text;
+				//gallery.insertAdjacentHTML('beforeend', text);
+			}
+		</script>
+
+		<script>
+			$(document).ready(function(){
+				$("img").click(function(){
+					$(".modalPicture").css({"opacity": "1", "pointer-events": "auto"});
+					var link = $(this).attr("src");
+					var start = link.lastIndexOf("/") + 1;
+					var end = link.length;
+					link = link.slice(start,end);
+					//link = '<img style="margin: auto;" class="img-responsive" alt="image" src="Gallery/' + link + '" />';
+					link = "images/gallery/" + link;
+					$("#modalImg").attr("src", link);
+					//document.getElementById("enlargedImg").innerHTML = link;
+				});
+
+				$(".modalPicture").click(function(){
+					$(".modalPicture").css({"opacity": "0", "pointer-events": "none"});
+					$("#modalImg").attr("src", "");
+				});
+			});
+		</script>
+
+		<!-- Google Analytics Tracking -->
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-64513855-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+	</head>
+
+	<!--body onload="createGallery();"-->
+	<body>
+		<!-- The page -->
+		<div class="container-fluid" id="gallery" style="text-align: center;">
+      <h2> 2015 </h2>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_00.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_01.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_02.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_03.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_04.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_05.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_06.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_07.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_08.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_09.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_10.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_11.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_12.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_13.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_14.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_15.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_16.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_17.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_18.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_19.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_20.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_21.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_22.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_23.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_24.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_25.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_26.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_27.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_28.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_29.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_30.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_31.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_32.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_33.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_34.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_35.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_36.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_37.jpg"/>
+			<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="images/gallery/thumbnails/2015_38.jpg"/>
+
+      <div class="row" style="text-align: center; margin-top: 40px;">
+          <a class="btn btn-primary" href="index.html">Go back</a>
+      </div>
+		</div>
+
+		<div id="modalDiv" class="modalPicture">
+			<div id="enlargedImg">
+				<img id="modalImg" style="margin: auto"  alt="image" src=""/>
+			</div>
+		</div>
+
+		<br/>
+		<br/>
+	</body>
+</html>
