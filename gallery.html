@@ -86,33 +86,67 @@
 		</style>
 
 		<script>
+			var activeTab = 2015;
 
-			function createGallery() {
-				var prefix = '<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/';
-				var suffix = '.jpg"/>';
-				var num;
-				var text = "";
+			function setActiveTab(year) {
+				activeTab = year;
+			}
+			// function createGallery() {
+			// 	var prefix = '<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/';
+			// 	var suffix = '.jpg"/>';
+			// 	var num;
+			// 	var text = "";
 
-				for (var i = 0; i < 39; i++) {
-					if (i < 10) 
-						num = "0" + i;
-					else
-						num = i;
+			// 	for (var i = 0; i < 39; i++) {
+			// 		if (i < 10) 
+			// 			num = "0" + i;
+			// 		else
+			// 			num = i;
 					
-					text += prefix + num + suffix + "\n";
+			// 		text += prefix + num + suffix + "\n";
+			// 	}
+
+			// 	var gallery = document.getElementById("gallery");
+			// 	var newContent = document.createElement('div');
+			// 	newContent.innerHTML = text;
+
+			// 	while (newContent.firstChild) {
+			// 		gallery.appendChild(newContent.firstChild);
+			// 	}
+
+			// 	//console.log(text);
+			// 	//gallery.innerHTML = text;
+			// 	//gallery.insertAdjacentHTML('beforeend', text);
+			// }
+
+			function populateThumbnails(year) {
+				var imageCount = 0;
+				var startNumber = 1;
+
+				if (year == 2015) {
+					imageCount = 39;			// TODO: Need to rename all images
+				} else if (year == 2016) {
+					imageCount = 127;
+				} else {
+					return
 				}
 
-				var gallery = document.getElementById("gallery");
-				var newContent = document.createElement('div');
-				newContent.innerHTML = text;
+				var imgTab = document.getElementById(year);
 
-				while (newContent.firstChild) {
-					gallery.appendChild(newContent.firstChild);
+				for (var i = startNumber; i < imageCount; i++) {
+					var img = document.createElement("img");
+					var numberOfDigits = Math.floor(Math.log10(Math.abs(i))) + 1;
+					var zeros = new Array(3 - numberOfDigits + 1).join("0");
+
+					// Set image properties
+					img.src = "resources/gallery/" + year + "/thumbnails/" + year + "_" + zeros + i + ".jpeg";
+					img.width = 250
+					img.alt = year + "_" + i;
+					img.onclick = function() { enlarge(); };
+
+					// Add to tab page
+					imgTab.appendChild(img);
 				}
-
-				//console.log(text);
-				//gallery.innerHTML = text;
-				//gallery.insertAdjacentHTML('beforeend', text);
 			}
 		</script>
 
@@ -124,7 +158,7 @@
 					var start = link.lastIndexOf("/") + 1;
 					var end = link.length;
 					link = link.slice(start,end);
-					link = "resources/gallery/2015/" + link;
+					link = "resources/gallery/" + activeTab + "/" + link;
 					$("#modalImg").attr("src", link); 
 				});
 
@@ -178,9 +212,9 @@
 		<div class="container">
 			<br/>
 			<ul class="nav nav-pills nav-justified">
-				<li class="active"><a data-toggle="pill" href="#2015"> 2015 </a></li>
-				<li><a data-toggle="pill" href="#2016"> 2016 </a></li>
-				<li><a data-toggle="pill" href="#2016"> 2017 </a></li>
+				<li class="active"><a data-toggle="pill" href="#2015" onclick="setActiveTab(2015);"> 2015 </a></li>
+				<li><a data-toggle="pill" href="#2016" onclick="setActiveTab(2016)"> 2016 </a></li>	<!-- onclick="populateThumbnails(2016)" -->
+				<li><a data-toggle="pill" href="#2017" onclick="setActiveTab(2017)"> 2017 </a></li>
 			</ul>
 			<br/>
 		</div>
@@ -228,45 +262,133 @@
 					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2015_38.jpg"/>
 				</div>
 				<div id="2016" class="tab-pane fade">
-					<!--<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_00.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_01.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_02.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_03.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_04.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_05.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_06.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_07.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_08.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_09.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_10.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_11.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_12.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_13.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_14.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_15.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_16.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_17.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_18.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_19.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_20.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_21.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_22.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_23.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_24.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_25.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_26.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_27.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_28.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_29.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_30.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_31.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_32.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_33.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_34.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_35.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_36.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_37.jpg"/>
-					<img class="img-responsive image" alt="image_2015" onclick="enlarge();" src="resources/gallery/2015/thumbnails/2016_38.jpg"/>-->
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_001.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_002.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_003.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_004.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_005.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_006.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_007.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_008.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_009.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_010.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_011.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_012.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_013.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_014.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_015.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_016.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_017.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_018.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_019.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_020.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_021.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_022.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_023.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_024.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_025.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_026.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_027.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_028.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_029.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_030.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_031.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_032.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_033.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_034.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_035.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_036.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_037.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_038.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_039.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_040.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_041.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_042.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_043.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_044.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_045.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_046.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_047.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_048.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_049.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_050.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_051.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_052.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_053.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_054.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_055.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_056.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_057.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_058.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_059.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_060.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_061.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_062.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_063.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_064.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_065.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_066.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_067.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_068.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_069.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_070.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_071.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_072.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_073.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_074.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_075.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_076.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_077.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_078.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_079.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_080.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_081.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_082.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_083.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_084.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_085.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_086.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_087.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_088.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_089.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_090.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_091.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_092.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_093.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_094.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_095.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_096.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_097.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_098.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_099.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_100.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_101.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_102.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_103.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_104.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_105.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_106.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_107.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_108.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_109.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_110.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_111.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_112.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_113.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_114.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_115.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_116.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_117.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_118.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_119.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_120.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_121.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_122.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_123.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_124.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_125.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_126.jpeg"/>
+					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_127.jpeg"/>
 				</div>
 				<div id="2017" class="tab-pane fade">
 					<!-- TODO -->
