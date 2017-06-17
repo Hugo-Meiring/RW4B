@@ -29,6 +29,40 @@
 
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <style>
+        .demo-card-event.mdl-card {
+            width: 256px;
+            height: 256px;
+            background: #3E4EB8;
+        }
+        .demo-card-event > .mdl-card__actions {
+             border-color: rgba(255, 255, 255, 0.2);
+        }
+        .demo-card-event > .mdl-card__title {
+            align-items: flex-start;
+        }
+        .demo-card-event > .mdl-card__title > h4 {
+            margin-top: 0;
+        }
+        .demo-card-event > .mdl-card__actions {
+            display: flex;
+            box-sizing:border-box;
+            align-items: center;
+        }
+        .demo-card-event > .mdl-card__actions > .material-icons {
+            padding-right: 10px;
+        }
+        .demo-card-event > .mdl-card__title,
+        .demo-card-event > .mdl-card__actions,
+        .demo-card-event > .mdl-card__actions > .mdl-button {
+            color: #fff;
+        }
+
+        .demo-list-icon {
+            width: 300px;
+        }
+    </style>
 </head>
 
 <body>
@@ -42,10 +76,13 @@
             </div>
             <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
                 <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                    <a class="mdl-navigation__link is-active" href="index.html">Portfolio</a>
-                    <a class="mdl-navigation__link" href="blog.html">Blog</a>
+                    <a class="mdl-navigation__link is-active" href="index.html">Home</a>
+                    <a class="mdl-navigation__link" href="blog.html">Info</a>
                     <a class="mdl-navigation__link" href="about.html">About</a>
-                    <a class="mdl-navigation__link" href="contact.html">Contact</a>
+                    <a class="mdl-navigation__link" href="contact.html">Friends</a>
+                    <a class="mdl-navigation__link" href="">Goodwill</a>
+                    <a class="mdl-navigation__link" href="">Gallery</a>
+                    <a class="mdl-navigation__link" href="">Results</a>
                 </nav>
             </div>
         </header>
@@ -59,20 +96,181 @@
         </div>
         <main class="mdl-layout__content">
             <div class="mdl-grid portfolio-max-width">
+
+                <!-- Main card -->
                 <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src=" images/example-work01.jpg" border="0" alt="">
+                    <div class="mdl-card__media mdl-color--white">
+                        <img class="article-image" src="../resources/logo/RvN-RW4B.png" border="0" alt="">
                     </div>
                     <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Blog template</h2>
+                        <h2 class="mdl-card__title-text">Riana van Niekerk Run & Walk 4 Bibles</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
+                        <h4>
+                            Date:<br>
+                            July 1, 2017<br>
+                        </h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">About race</a>
+                    </div>
+                </div>
+
+                <!-- Location card -->
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1795.3016962954532!2d28.163988958084506!3d-25.84961109589918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDUwJzU4LjYiUyAyOMKwMDknNTQuMyJF!5e0!3m2!1sen!2sza!4v1497735916534" width="300" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Where and when?</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <p><strong> Place: </strong> Ho&euml;rskool Zwartkop </p>
+						<p><strong> Location: </strong> Corner of Mopani and Old Johannesburg Road, Centurion </p>
+                    </div>
+                </div>
+
+                <!-- T-Shirt -->
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media mdl-color--white">
+                        <img class="article-image" src="../resources/misc/shirt.png" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Get the shirt</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <span class="mdl-badge" data-badge="♥">Check out the merchantdise  </span>   
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
                         <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
                     </div>
                 </div>
+
+
+                <!-- Fees and times -->
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <!--<div class="mdl-card__media">
+                        <img class="article-image" src=" images/example-work01.jpg" border="0" alt="">
+                    </div>-->
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Basic details</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <table class="mdl-data-table">
+                        <thead>
+                            <tr>
+                            <th class="mdl-data-table__cell--non-numeric">Race</th>
+                            <th class="mdl-data-table__cell--non-numeric">Starting</th>
+                            <th class="mdl-data-table__cell--non-numeric">Entry</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td class="mdl-data-table__cell--non-numeric">21.1 km</td>
+                            <td class="mdl-data-table__cell--non-numeric">07:30</td>
+                            <td class="mdl-data-table__cell--non-numeric">R 100</td>
+                            </tr>
+                            <tr>
+                            <td class="mdl-data-table__cell--non-numeric">10 km</td>
+                            <td class="mdl-data-table__cell--non-numeric">07:30</td>
+                            <td class="mdl-data-table__cell--non-numeric">R 80</td>
+                            </tr>
+                            <tr>
+                            <td class="mdl-data-table__cell--non-numeric">5 km</td>
+                            <td class="mdl-data-table__cell--non-numeric">07:35</td>
+                            <td class="mdl-data-table__cell--non-numeric">R 40</td>
+                            </tr>
+                        </tbody>
+                        </table>
+
+                        <br/><br/>
+                        <span class="mdl-navigation__link"><i class="material-icons">info_outline</i> Temporary License: 21/10 km - R 30</span> <br/>
+                        <span class="mdl-navigation__link"><i class="material-icons">favorite_border</i> 1/2 price for great grand masters on the day entries only</span> <br/>
+                        <span class="mdl-navigation__link"><i class="material-icons" role="presentation">favorite_border</i> Free entry for wheelchair & blind athletes</span> <br/>   
+                        <!--<a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">favorite_border</i>Promos</a>   -->
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="">More details</a>
+                    </div>
+                </div>
+
+                <!-- Entries -->
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src=" images/example-work07.jpg" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Entries</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        Pre-entries:  <br/>
+                        <div style="margin-left: 10px">
+                            <span class="mdl-navigation__link"><i class="material-icons">room</i>Run-A-Way Sport</span><br/>
+                            <span class="mdl-navigation__link"><i class="material-icons">room</i>Running Inn<br/>
+                            <span class="mdl-navigation__link"><i class="material-icons">room</i>Sweat Shop (Southdowns)</span><br/>
+                            <span class="mdl-navigation__link"><i class="material-icons">room</i>The Runner's Store (Pretoria CBD)</span><br/><br/>
+                        </div>
+                        
+
+
+
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="">Enter online</a>
+                    </div>
+                </div>
+
+                <!-- Race routes -->
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src=" images/example-work08.jpg" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Race routes</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        It helps to know the path the lies ahead, go check the official routes for 21.1 km, 10 km and 5 km.
+                   </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Checkout routes</a>
+                    </div>
+                </div>
+
+                <!-- Friends of Riana van Niekerk RW4B -->
+                <div class="mdl-cell mdl-cell--8-col mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src=" images/example-work07.jpg" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Friends of RvN RW4B</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        Meet the friendly sponsors and friends who make this amazing race possible. Without them the race would never happen.
+                        <br/><br/><br/>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
+                    </div>
+                </div>
+
+                <!-- Volunteer -->
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src=" images/example-work08.jpg" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Want to volunteer?</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        Anyone is welcome to join the RvN RW4B family. All hands are appreciated and do not go unnoticed.
+                   </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Sign me up!</a>
+                    </div>
+                </div>
+
+
+                <!-- Learn -->
                 <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
                     <div class="mdl-card__media">
                         <img class="article-image" src=" images/example-work07.jpg" border="0" alt="">
