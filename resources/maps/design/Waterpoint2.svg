@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="64px"
+   height="64px"
+   id="svg3903"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="Waterpoint2.svg">
+  <defs
+     id="defs3905">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3003">
+      <stop
+         style="stop-color:#00ccff;stop-opacity:1;"
+         offset="0"
+         id="stop3005" />
+      <stop
+         style="stop-color:#3771c8;stop-opacity:1"
+         offset="1"
+         id="stop3007" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3003"
+       id="linearGradient3009"
+       x1="31.626957"
+       y1="10.774144"
+       x2="30.212744"
+       y2="59.243099"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.88568701,0,0,0.88568701,4.0656089,3.4201255)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3003"
+       id="linearGradient3783"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.88568701,0,0,0.88568701,19.236263,10.619758)"
+       x1="31.626957"
+       y1="10.774144"
+       x2="30.212744"
+       y2="59.243099" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.75"
+     inkscape:cx="29.562631"
+     inkscape:cy="89.471274"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:document-units="px"
+     inkscape:grid-bbox="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3908">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <path
+       style="fill:none;fill-opacity:1;stroke:#1a1a1a;stroke-width:7.28091764000000020;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:13.44000053000000100"
+       d="M 32.577261 8.3661687 L 25.655901 20.354976 L 20.588479 29.161176 C 18.130247 33.199924 16.695201 35.585638 16.695201 39.574125 C 16.695201 48.350423 23.800965 55.456185 32.577261 55.456185 C 41.353559 55.456185 48.459324 48.350423 48.459324 39.574125 C 48.459324 35.632503 47.003697 33.123573 44.658757 29.253861 L 39.52952 20.354976 L 32.577261 8.3661687 z "
+       id="path3775" />
+    <path
+       id="path3001"
+       d="m 32.577261,18.140729 -4.635927,8.030104 -3.394159,5.898393 c -1.646524,2.705154 -2.607718,4.303105 -2.607718,6.974595 0,5.878364 4.759441,10.637804 10.637804,10.637804 5.878365,0 10.637807,-4.75944 10.637807,-10.637804 0,-2.640099 -0.974979,-4.320581 -2.54562,-6.912514 l -3.435563,-5.960474 -4.656624,-8.030104 z"
+       style="fill:none;stroke:#1a1a1a;stroke-width:4.87675905;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:13.44000053"
+       inkscape:connector-curvature="0" />
+    <path
+       sodipodi:nodetypes="cccsssccc"
+       inkscape:connector-curvature="0"
+       id="path3847"
+       d="m 32.577261,11.717135 -6.101984,10.569527 -4.467521,7.763688 c -2.167217,3.560627 -3.432377,5.663911 -3.432377,9.180226 0,7.737326 6.264557,14.001882 14.001882,14.001882 7.737326,0 14.001885,-6.264556 14.001885,-14.001882 0,-3.474998 -1.283304,-5.686912 -3.350642,-9.098513 l -4.522019,-7.845401 z"
+       style="fill:none;fill-opacity:1;stroke:url(#linearGradient3009);stroke-width:6.41897582999999990;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:13.44000053000000100" />
+  </g>
+</svg>
