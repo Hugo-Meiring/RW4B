@@ -32,6 +32,11 @@
 
 			ga('create', 'UA-64513855-1', 'auto');
 			ga('send', 'pageview');
+
+			// Lazy load images
+			$('a[data-toggle="tab"]').on('shown.bs.tab', function () {
+    			$(window).trigger('scroll');
+			});
 		</script>
 	</head>
 

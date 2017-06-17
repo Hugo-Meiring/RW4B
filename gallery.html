@@ -167,6 +167,11 @@
 					$("#modalImg").attr("src", "");
 				});
 			});
+
+			// Lazy load images
+			$('a[data-toggle="tab"]').on('shown.bs.tab', function () {
+    			$(window).trigger('scroll');
+			});
 		</script>
 
 		<!-- Google Analytics Tracking -->
