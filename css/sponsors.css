@@ -1,0 +1,119 @@
+div.demo-card-image {
+  position: center center;
+  background-repeat:no-repeat;
+  background-position: center center;
+}
+
+.sq {
+  max-width: 190px;
+  max-height: 250px;
+}
+
+.rect {
+  max-width: 190px;
+  max-height: 250px;
+}
+
+.demo-card-image > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.demo-card-image__filename {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Tier 1 Sponsors **/
+.sponsor-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%); 
+}
+
+.sponsor-gorr {
+  background: url('../resources/sponsors/gorr_glass_and_aluminium.jpg') center / cover;
+  background-size: 70%;
+}
+
+.sponsor-ksm {
+  background: url('../resources/sponsors/kerk_sonder_mure.jpg') center / cover;
+  background-size: 90%;
+}
+
+.sponsor-rockets {
+  background: url('../resources/sponsors/rockets.jpg') center / cover;
+  background-size: 90%;
+}
+
+.sponsor-monitor {
+  background: url('../resources/sponsors/monitor_net.jpg') center / cover;
+  background-size: 70%;
+}
+
+.sponsor-benchmark {
+  background: url('../resources/sponsors/benchmark_group.jpg') center / cover;
+  background-size: 90%;
+}
+
+.sponsor-kansel1 {
+  background: url('../resources/sponsors/radio_kansel.jpg') center / cover;
+  background-size: 70%;
+}
+
+.sponsor-kansel2 {
+  background: url('../resources/sponsors/leave_your_mark.jpg') center / cover;
+  background-size: 70%;
+}
+
+.sponsor-grb1 {
+  background: url('../resources/sponsors/grb.jpg') center / cover;
+  background-size: 70%;
+}
+
+.sponsor-grb2 {
+  background: url('../resources/sponsors/grb_and_associates.jpg') center / cover;
+  background-size: 70%;    
+}
+
+.sponsor-aquelle {
+  background: url('../resources/sponsors/aquelle.jpg') center / cover;
+  background-size: 90%;
+}
+
+.sponsor-cansa {
+  background: url('../resources/sponsors/cansa_active.jpg') center / cover;
+  background-size: 90%;
+}
+
+.sponsor-sheq {
+  background: url('../resources/sponsors/sheq_advance.jpg') center / cover;
+  background-size: 70%;
+}
+
+.sponsor-iss {
+  background: url('../resources/sponsors/iss.jpg') center / cover;
+  background-size: 70%;    
+}
+
+.sponsor-sportsmans {
+  background: url('../resources/sponsors/sportsmans_warehouse.jpg') center / cover;
+  background-size: 90%;    
+}
+
+.sponsor-grootfm {
+  background: url('../resources/sponsors/groot_fm.jpg') center / cover;
+  background-size: 90%;    
+}
+
+.sponsor-zeroplus {
+  background: url('../resources/sponsors/zeroplus.jpg') center / cover;
+  background-size: 90%;    
+}
+
+.sponsor-lew {
+  background: url('../resources/sponsors/lew_geffen.jpg') center / cover;
+  background-size: 90%;    
+}
