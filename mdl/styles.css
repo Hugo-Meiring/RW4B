@@ -163,10 +163,10 @@ img.article-image {
   margin: auto;
 }
 
-footer {
+/*footer {
   background-image: url(images/footer-background.png);
   background-size: cover;
-}
+}*/
 
 .demo-card-event.mdl-card {
     width: 256px;
@@ -208,4 +208,47 @@ footer {
 
 .full-width {
     width: 100%;
+}
+
+/* Themes */
+.info-notify {
+  color: #FFA000
+}
+
+.info-details {
+  color: #01579B
+}
+
+.info-alert {
+  color: #F44336
+}
+
+.info-success {
+  color: #4CAF50;
+}
+
+.info-special {
+  color: #006064;
+}
+
+.white {
+  color: #FFF;
+}
+
+.left-icon {
+  margin-right: 10px;
+}
+
+.right-icon {
+  margin-left: 10px;
+}
+
+.mdl-badge[data-badge]:after{
+  background-color: #F44336;
+  color: #FFF;
+}
+
+.info-notify .info-details .info-alert {
+  padding: 40px !important;
+  margin: 40px !important;
 }
