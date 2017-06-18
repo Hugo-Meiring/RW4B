@@ -267,7 +267,7 @@ img.article-image {
   text-align: center;
 }
 
-.footer {
+/*.footer {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -275,7 +275,7 @@ img.article-image {
   padding: 1rem;
   background-color: #efefef;
   text-align: center;
-}
+}*/
 
 .table-bug {
   width: 95%;
