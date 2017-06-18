@@ -33,6 +33,11 @@ div.demo-card-image {
   transform: translateX(-50%) translateY(-50%); 
 }
 
+.sponsor-bible {
+  background: url('../resources/sponsors/bible_society.jpg') center / cover;
+  background-size: 100%;
+}
+
 .sponsor-gorr {
   background: url('../resources/sponsors/gorr_glass_and_aluminium.jpg') center / cover;
   background-size: 70%;
@@ -40,12 +45,17 @@ div.demo-card-image {
 
 .sponsor-ksm {
   background: url('../resources/sponsors/kerk_sonder_mure.jpg') center / cover;
-  background-size: 90%;
+  background-size: 95%;
 }
 
 .sponsor-rockets {
   background: url('../resources/sponsors/rockets.jpg') center / cover;
-  background-size: 90%;
+  background-size: 95%;
+}
+
+.sponsor-alpha {
+  background: url('../resources/sponsors/alpha_centurion.jpg') center / cover;
+  background-size: 95%;
 }
 
 .sponsor-monitor {
@@ -55,7 +65,7 @@ div.demo-card-image {
 
 .sponsor-benchmark {
   background: url('../resources/sponsors/benchmark_group.jpg') center / cover;
-  background-size: 90%;
+  background-size: 95%;
 }
 
 .sponsor-kansel1 {
@@ -80,12 +90,17 @@ div.demo-card-image {
 
 .sponsor-aquelle {
   background: url('../resources/sponsors/aquelle.jpg') center / cover;
-  background-size: 90%;
+  background-size: 95%;
 }
 
 .sponsor-cansa {
   background: url('../resources/sponsors/cansa_active.jpg') center / cover;
-  background-size: 90%;
+  background-size: 95%;
+}
+
+.sponsor-hoka {
+  background: url('../resources/sponsors/hoka_one_one.jpg') center / cover;
+  background-size: 95%;
 }
 
 .sponsor-sheq {
@@ -100,20 +115,45 @@ div.demo-card-image {
 
 .sponsor-sportsmans {
   background: url('../resources/sponsors/sportsmans_warehouse.jpg') center / cover;
-  background-size: 90%;    
+  background-size: 95%;    
 }
 
 .sponsor-grootfm {
   background: url('../resources/sponsors/groot_fm.jpg') center / cover;
-  background-size: 90%;    
+  background-size: 95%;    
+}
+
+.sponsor-momentum {
+  background: url('../resources/sponsors/ryno_and_jeanette.jpg') center / cover;
+  background-size: 95%;   
 }
 
 .sponsor-zeroplus {
   background: url('../resources/sponsors/zeroplus.jpg') center / cover;
-  background-size: 90%;    
+  background-size: 95%;    
+}
+
+.sponsor-jaycee {
+  background: url('../resources/sponsors/jaycee.jpg') center / cover;
+  background-size: 95%;   
+}
+
+.sponsor-north {
+  background: url('../resources/sponsors/athletics_gauteng_north.jpg') center / cover;
+  background-size: 95%;   
 }
 
 .sponsor-lew {
   background: url('../resources/sponsors/lew_geffen.jpg') center / cover;
-  background-size: 90%;    
+  background-size: 95%;    
+}
+
+.sponsor-top {
+  background: url('../resources/sponsors/top_net.jpg') center / cover;
+  background-size: 95%
+}
+
+.sponsor-wilger {
+  background: url('../resources/sponsors/wilger_guesthouse.jpg') center / cover;
+  background-size: 95%
 }
