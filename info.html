@@ -1,207 +1,227 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<!-- Essentials -->
-		<title> Run &#38; Walk for Bibles Marathon </title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- Bootstrap -> Responsive design -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-		<!-- Custom style sheet -->
-		<link rel="stylesheet" type="text/css" href="styling/styling.css">
-		<link rel="stylesheet" type="text/css" href="css/custom.css">
-		
 
-		<!-- Google Analytics Tracking -->
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A portfolio template that uses Material Design Lite.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>RvN RW4B</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-light_blue.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
 
-			ga('create', 'UA-64513855-1', 'auto');
-			ga('send', 'pageview');
-		</script>
-	</head>
+    <!-- Google Analytics Tracking -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	<body>
-			<!-- Navigation toolbar -->
-		<nav class="navbar navbar-inverse">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<!-- Run and Walk Logo -->
-					<a class="navbar-brand" href="index.html"> Run &#38; Walk for Bibles </a> 
-				</div>
-				<div class="collapse navbar-collapse" id="myNavbar">
-					<ul class="nav navbar-nav">
-						<li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home </a></li>
-						<li class="active"><a href="info.html"><span class="glyphicon glyphicon-info-sign" style="color:#00bfff"></span> Info </a></li>
-						<li><a href="about.html"><span class="glyphicon glyphicon-globe"></span> About </a></li>
-						<li><a href="friends.html"><span class="glyphicon glyphicon-link"></span> Friends </a></li>
-						<li><a href="goodwill.html"><span class="glyphicon glyphicon-heart"></span> Goodwill </a></li>
-						<li><a href="gallery.html"><span class="glyphicon glyphicon-picture"></span> Gallery </a></li>
-						<li><a href="results.html"><span class="glyphicon glyphicon-star"></span> Results </a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+        ga('create', 'UA-64513855-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
 
-		<!-- The page -->
-		<div class="container">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<div class="panel panel-primary">
-							<div class="panel-heading"> Rules &#38; General Information </div>
-							<div class="panel-body">
-								<strong> All Athletes </strong>
-								<ul> 
-									<li> All athletes must be amateurs as defined under Athletics South Africa rules, and not be under the stipulated ages as indicated.  </li>
-									<li> All entrants will participate under the rules of AGN and ASA and it is the athlete's responsibility to be familiar with the rules. </li>
-									<li> Age restrictions: 
-										<ul>
-											<li> Minimum age of 10 years on the day of the race for 10 km </li>
-											<li> Minimum age of 16 years on the day of the race for 21.1 km </li>
-										</ul>
-									</li>
-									<li> Marshals and Traffic Officers must be obeyed at all times – failure to comply with their instructions may lead to immediate disqualification. </li>
-									<li> No seconding will be allowed. </li>
-									<li> Sufficient refreshment stations will be available. </li>
-									<li> It is the participant’s responsibility to ensure that he/she is medically fit and healthy to participate in any of the events. </li>
-									<li> The race committee reserves the right to accept or reject any entry. </li>
-									<li> Proof of age must be produced if requested by the race referee. </li>
-									<li> No iPods or any other audio devices are allowed. (IAAF &#38; ASA Ruling). </li>
-									<li> Free entry for wheelchair and blind athletes </li> 
-									<li> No animals allowed. </li>
-									<li> Medical support will be present on race day. </li>
-								</ul>
+<body>
+    <!-- Navigation bar -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
+            <div class="mdl-layout__header-row portfolio-logo-row">
+                <span class="mdl-layout__title">
+                    <div class="portfolio-logo"></div>
+                </span>
+            </div>
+            <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
+                <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                    <a class="mdl-navigation__link" href="index.html">Home</a>
+                    <a class="mdl-navigation__link is-active" href="info.html">Info</a>
+                    <a class="mdl-navigation__link" href="about.html">About</a>
+                    <a class="mdl-navigation__link" href="friends.html">Friends</a>
+                    <a class="mdl-navigation__link" href="goodwill.html">Goodwill</a>
+                    <a class="mdl-navigation__link" href="gallery.html">Gallery</a>
+                    <a class="mdl-navigation__link" href="results.html">Results</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+            <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                <a class="mdl-navigation__link" href="index.html">Home</a>
+                <a class="mdl-navigation__link is-active" href="info.html">Info</a>
+                <a class="mdl-navigation__link" href="about.html">About</a>
+                <a class="mdl-navigation__link" href="friends.html">Friends</a>
+                <a class="mdl-navigation__link" href="goodwill.html">Goodwill</a>
+                <a class="mdl-navigation__link" href="gallery.html">Gallery</a>
+                <a class="mdl-navigation__link" href="results.html">Results</a>
+            </nav>
+        </div>
 
-								<strong> Licensed Athletes </strong>
-								<ul> 
-									<li> All entrants must be in possession of a valid 2016 license number. </li>
-									<li> Athletes must wear BOTH the official race number on front and the 2016 ASA license number on the back of the running vest. </li>
-									<li> Athletes competing for category prizes MUST wear official age category ID tags on the front and back of the running vest. </li>
-									<li> Walkers competing for prize money must wear WALKER/W tags on the front and back of their vest. </li>
-									<li> Foreign athletes must comply with IAAF Rule 4 paragraph 2 regarding the handing over of their permits to the Race Organisers. </li>
-								</ul>
+        <!-- Content -->
+        <main class="mdl-layout__content">
+            <div class="mdl-grid portfolio-max-width">
+            
+            
+                <!-- Rules and general information -->
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Rules &#38; General Information </h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <strong> All Athletes </strong>
+                        <ul> 
+                            <li> All athletes must be amateurs as defined under Athletics South Africa rules, and not be under the stipulated ages as indicated.  </li>
+                            <li> All entrants will participate under the rules of AGN and ASA and it is the athlete's responsibility to be familiar with the rules. </li>
+                            <li> Age restrictions: 
+                                <ul>
+                                    <li> Minimum age of 10 years on the day of the race for 10 km </li>
+                                    <li> Minimum age of 16 years on the day of the race for 21.1 km </li>
+                                </ul>
+                            </li>
+                            <li> Marshals and Traffic Officers must be obeyed at all times – failure to comply with their instructions may lead to immediate disqualification. </li>
+                            <li> No seconding will be allowed. </li>
+                            <li> Sufficient refreshment stations will be available. </li>
+                            <li> It is the participant’s responsibility to ensure that he/she is medically fit and healthy to participate in any of the events. </li>
+                            <li> The race committee reserves the right to accept or reject any entry. </li>
+                            <li> Proof of age must be produced if requested by the race referee. </li>
+                            <li> No iPods or any other audio devices are allowed. (IAAF &#38; ASA Ruling). </li>
+                            <li> Free entry for wheelchair and blind athletes </li> 
+                            <li> No animals allowed. </li>
+                            <li> Medical support will be present on race day. </li>
+                        </ul>
 
-								<strong> Unlicensed Atheletes </strong>
-								<ul>
-									<li> All unlicensed athletes participating in the 21.1 km and 10km events must purchase a temporary license number </li>
-									<li> The temporary license must be worn on the back of the running vest and the race number on the front. </li>
-								</ul>
+                        <strong> Licensed Athletes </strong>
+                        <ul> 
+                            <li> All entrants must be in possession of a valid 2016 license number. </li>
+                            <li> Athletes must wear BOTH the official race number on front and the 2016 ASA license number on the back of the running vest. </li>
+                            <li> Athletes competing for category prizes MUST wear official age category ID tags on the front and back of the running vest. </li>
+                            <li> Walkers competing for prize money must wear WALKER/W tags on the front and back of their vest. </li>
+                            <li> Foreign athletes must comply with IAAF Rule 4 paragraph 2 regarding the handing over of their permits to the Race Organisers. </li>
+                        </ul>
 
-								<strong> General </strong>
-								<ul>
-									<li> Entry fee is not refundable. </li>
-									<li> Please do not discard water sachets/cups in gardens or drains. Please drop them in the bins provided or directly on the road. </li>
-									<li> Toilets will be available at every water point. </li>
-									<li> Race results will be published within five working days at www.raceresults.co.za and www.runandwalkforbibles.co.za </li>
-								</ul>
-							</div>
+                        <strong> Unlicensed Atheletes </strong>
+                        <ul>
+                            <li> All unlicensed athletes participating in the 21.1 km and 10km events must purchase a temporary license number </li>
+                            <li> The temporary license must be worn on the back of the running vest and the race number on the front. </li>
+                        </ul>
+
+                        <strong> General </strong>
+                        <ul>
+                            <li> Entry fee is not refundable. </li>
+                            <li> Please do not discard water sachets/cups in gardens or drains. Please drop them in the bins provided or directly on the road. </li>
+                            <li> Toilets will be available at every water point. </li>
+                            <li> Race results will be published within five working days at www.raceresults.co.za and www.runandwalkforbibles.co.za </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!-- Prize money and medal -->
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Prize Money &#38; Medals</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">		
+                        <table class="mdl-data-table mdl-js-data-table full-width">
+                            <thead class="full-width">
+                                <tr>
+                                    <th class="mdl-data-table__cell--non-numeric"> CATEGORY </th>
+                                    <th> 21.1 km </th>
+                                    <th> 10 km </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric"> 1<sup>st</sup> Open </td>
+                                    <td> R 300 </td>
+                                    <td> R 150 </td>
+                                </tr>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric"> 2<sup>nd</sup> Open </td>
+                                    <td> R 200 </td>
+                                    <td> R 100 </td>
+                                </tr>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric"> 3<sup>rd</sup> Open </td>
+                                    <td> R 150 </td>
+                                    <td> R 75 </td>
+                                </tr>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric"> 1<sup>st</sup> Veteran </td>
+                                    <td> R 150 </td>
+                                    <td> R 75 </td>
+                                </tr>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric"> 1<sup>st</sup> Master </td>
+                                    <td> R 150 </td>
+                                    <td> R 75 </td>
+                                </tr>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric"> 1<sup>st</sup> G. Master </td>
+                                    <td> R 150 </td>
+                                    <td> R 75 </td>
+                                </tr>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric"> 1<sup>st</sup> GG. Master </td>
+                                    <td> R 150 </td>
+                                    <td> R 75 </td>
+                                </tr>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric"> 80+ </td>
+                                    <td> R 150 </td>
+                                    <td> R 75 </td>
+                                </tr>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric"> 1<sup>st</sup> Junior </td>
+                                    <td> R 150 </td>
+                                    <td> R 75 </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br/>
+                        <span class="mdl-navigation__link info-notify"><i class="material-icons left-icon">info_outline</i>Equal for ladies / gents &#38; runners / walkers</span><br/>
+                        <br/>
+                        Cash prizes will be awarded by the organisers and additional vouchers to each winner issued as awards by Sportsman Warehouse.
+                        <hr/><br/>
+                        <h4 class="mdl-typography--text-center">Medals to all participants</h4> 
+                        <h5 class="mdl-typography--text-center info-special">Sponsored by the Bible Society of South Africa</h5><br/>
+                        <hr/>
+                        <h4><span class="mdl-badge" data-badge="5">Important details</span></h4>
+                        <span class="mdl-navigation__link info-success"><i class="material-icons icon-left">info_outline</i>Food and Beverages will be available</span><br/>
+                        <span class="mdl-navigation__link info-success"><i class="material-icons icon-left">info_outline</i>T-shirts for Bibles will be on sale</span><br/>
+                        <span class="mdl-navigation__link info-success"><i class="material-icons icon-left">info_outline</i>Club gazebos welcome. Togbag area available</span><br/>
+                        <span class="mdl-navigation__link info-success"><i class="material-icons icon-left">info_outline</i>Parking available at Lewende Woord and around the school</span><br/>
+                        <span class="mdl-navigation__link info-alert"><i class="material-icons icon-left">warning</i>Participation at own risk. The organisers accept no responsibility for any loss, damage or injuries.</span><br/>
+
+                        <br/><hr/><br/>
+                        <div class="center-div"> 
+                            <!-- Accent-colored raised button with ripple -->
+                            <a href="resources/pdf/Run_Walk_for_Bibles_2017_Flyer.pdf" download>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                                <span class="white">Download pamphlet</span>
+                                </button>
+                            </a>
 						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="panel panel-primary">
-							<div class="panel-heading"> Prize Money &#38; Medals </div>
-							<div class="panel-body">
-								<p> (Equal for ladies / gents &#38; runners / walkers) </p>
-								<hr/>
-								
-								<table class="table table-striped">
-									<thead>
-										<tr>
-											<th> CATEGORY </th>
-											<th> 21.1 km </th>
-											<th> 10 km </th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td> 1<sup>st</sup> Open </td>
-											<td> R 300 </td>
-											<td> R 150 </td>
-										</tr>
-										<tr>
-											<td> 2<sup>nd</sup> Open </td>
-											<td> R 200 </td>
-											<td> R 100 </td>
-										</tr>
-										<tr>
-											<td> 3<sup>rd</sup> Open </td>
-											<td> R 150 </td>
-											<td> R 75 </td>
-										</tr>
-										<tr>
-											<td> 1<sup>st</sup> Veteran </td>
-											<td> R 150 </td>
-											<td> R 75 </td>
-										</tr>
-										<tr>
-											<td> 1<sup>st</sup> Master </td>
-											<td> R 150 </td>
-											<td> R 75 </td>
-										</tr>
-										<tr>
-											<td> 1<sup>st</sup> G. Master </td>
-											<td> R 150 </td>
-											<td> R 75 </td>
-										</tr>
-										<tr>
-											<td> 1<sup>st</sup> GG. Master </td>
-											<td> R 150 </td>
-											<td> R 75 </td>
-										</tr>
-										<tr>
-											<td> 80+ </td>
-											<td> R 150 </td>
-											<td> R 75 </td>
-										</tr>
-										<tr>
-											<td> 1<sup>st</sup> Junior </td>
-											<td> R 150 </td>
-											<td> R 75 </td>
-										</tr>
-									</tbody>
-								</table>
+                    </div>
+                </div>
+            </div>
 
-								<h5> Cash prizes will be awarded by the organisers and additional vouchers to each winner issued as awards by Sportsman Warehouse. </h5><hr/>
-								<h4 style="text-align: center;"> Medals to all participants </h4> 
-								<h5 style="text-align: center;"> (Sponsored by the Bible Society of South Africa) </h5>
-							</div>
-						</div>
+            <br/><br/><br/>
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo"><span class="mdl-navigation__link white">Made with <i class="material-icons icon-left info-alert">favorite</i></span></div>
+                </div>
+                <div class="mdl-mini-footer__right-section">
+                    <ul class="mdl-mini-footer__link-list">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="about.html#contact">Contact us</a></li>
+                        <li><a href="" onclick="scroll(0,0);">Return to top</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</body>
 
-						<div class="alert alert-success" style="text-align:center">
-							<strong> Food and Beverages will be available </strong>
-						</div>
-
-						<div class="alert alert-success" style="text-align:center">
-							<strong> T-shirts for Bibles will be on sale </strong>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="alert alert-info" style="text-align:center">
-				<strong> Club gazebos welcome. Togbag area available </strong>
-			</div>
-
-			<div class="alert alert-info" style="text-align:center">
-				<strong> Parking available at Lewende Woord and around the school </strong>
-			</div>
-
-			<div class="alert alert-danger" style="text-align:center">
-				<strong> Participation at own risk. <br/> The organisers accept no responsibility for any loss, damage or injuries. </strong>
-			</div>
-
-			<br/><br/><br/>
-		</div>	
-	</body>
 </html>
