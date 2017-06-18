@@ -252,3 +252,7 @@ img.article-image {
   padding: 40px !important;
   margin: 40px !important;
 }
+
+.mdl-card__media {
+  background-color: #FFF;
+}
