@@ -1,20 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<!-- Essentials -->
-		<title> Run &#38; Walk for Bibles Marathon </title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- jQuery -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<!-- Bootstrap -> Responsive design -->
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-		<!-- Custom styling -->
-		<style>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A portfolio template that uses Material Design Lite.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>RvN RW4B</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-light_blue.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <!-- TODO: Old code, remove when possible -->
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Bootstrap -> Responsive design -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <style>
 			body {
-				background-color: rgb(22, 22, 22);
+				/*background-color: rgb(22, 22, 22);*/
 			}
 
 			.container-fluid {
@@ -168,54 +174,75 @@
 				});
 			});
 		</script>
+    <!-- End of old code -->
 
-		<!-- Google Analytics Tracking -->
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <!-- Google Analytics Tracking -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-			ga('create', 'UA-64513855-1', 'auto');
-			ga('send', 'pageview');
-		</script>
-	</head>
+        ga('create', 'UA-64513855-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
 
-	<!--body onload="createGallery();"-->
-	<body>
-			<!-- Navigation toolbar -->
-		<nav class="navbar navbar-inverse">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<!-- Run and Walk Logo -->
-					<a class="navbar-brand" href="index.html"> Run &#38; Walk for Bibles </a> 
-				</div>
-				<div class="collapse navbar-collapse" id="myNavbar">
-					<ul class="nav navbar-nav">
-						<li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home </a></li>
-						<li><a href="info.html"><span class="glyphicon glyphicon-info-sign"></span> Info </a></li>
-						<li><a href="about.html"><span class="glyphicon glyphicon-globe"></span> About </a></li>
-						<li><a href="friends.html"><span class="glyphicon glyphicon-link"></span> Friends </a></li>
-						<li><a href="goodwill.html"><span class="glyphicon glyphicon-heart"></span> Goodwill </a></li>
-						<li class="active"><a href="gallery.html"><span class="glyphicon glyphicon-picture" style="color:#4DFF4D"></span> Gallery </a></li>
-						<li><a href="results.html"><span class="glyphicon glyphicon-star"></span> Results </a></li>
-					</ul>
-				</div>
+<body>
+    <a id="top"></a>
+    <!-- BURN THIS TO THE GROUND -->
+    <div id="modalDiv" class="modalPicture">
+			<div id="enlargedImg">
+				<img id="modalImg" style="margin: auto"  alt="image" src=""/>
 			</div>
-		</nav>
+		</div>
+    <!-- END OF BURN -->
+    <!-- Navigation bar -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
+            <div class="mdl-layout__header-row portfolio-logo-row">
+                <span class="mdl-layout__title">
+                    <div class="portfolio-logo"></div>
+                </span>
+            </div>
+            <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
+                <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                    <a class="mdl-navigation__link" href="index.html">Home</a>
+                    <a class="mdl-navigation__link" href="info.html">Info</a>
+                    <a class="mdl-navigation__link" href="about.html">About</a>
+                    <a class="mdl-navigation__link" href="friends.html">Friends</a>
+                    <a class="mdl-navigation__link" href="goodwill.html">Goodwill</a>
+                    <a class="mdl-navigation__link is-active" href="gallery.html">Gallery</a>
+                    <a class="mdl-navigation__link" href="results.html">Results</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+            <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                <a class="mdl-navigation__link is-active" href="index.html">Home</a>
+                <a class="mdl-navigation__link" href="info.html">Info</a>
+                <a class="mdl-navigation__link" href="about.html">About</a>
+                <a class="mdl-navigation__link" href="friends.html">Friends</a>
+                <a class="mdl-navigation__link" href="goodwill.html">Goodwill</a>
+                <a class="mdl-navigation__link" href="gallery.html">Gallery</a>
+                <a class="mdl-navigation__link" href="results.html">Results</a>
+            </nav>
+        </div>
 
-		<!-- The page -->
+        <!-- Content -->
+        <main class="mdl-layout__content">
+            <div class="mdl-grid portfolio-max-width">
+
+
+                <!-- BURN WITH FIRE WHEN POSSIBLE TODO TODO TODO -->
+                <!-- PLZ HOOMAN BURN IT !!!! BURRRRRNNNNN IT!!! -->
+
+                <!-- The page -->
 		<div class="container">
 			<br/>
 			<ul class="nav nav-pills nav-justified">
 				<li class="active"><a data-toggle="pill" href="#2015" onclick="setActiveTab(2015);"> 2015 </a></li>
 				<li><a data-toggle="pill" href="#2016" onclick="setActiveTab(2016)"> 2016 </a></li>	<!-- onclick="populateThumbnails(2016)" -->
-				<li><a data-toggle="pill" href="#2017" onclick="setActiveTab(2017)"> 2017 </a></li>
 			</ul>
 			<br/>
 		</div>
@@ -391,20 +418,35 @@
 					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_126.jpeg"/>
 					<img class="img-responsive image" alt="image_2016" onclick="enlarge();" src="resources/gallery/2016/thumbnails/2016_127.jpeg"/>
 				</div>
-				<div id="2017" class="tab-pane fade">
-					<!-- TODO -->
-				</div>
 			</div>
 		</div>	
 
-		<div id="modalDiv" class="modalPicture">
-			<div id="enlargedImg">
-				<img id="modalImg" style="margin: auto"  alt="image" src=""/>
-			</div>
-		</div>
+		<br/>
+		<br/>
 
-		<br/>
-		<br/>
-	</body>
+                <!-- YOU CAN CRY NOW -->
+                <!-- HORROR IS PAST -->
+
+                
+
+
+            </div>
+            <br/><br/><br/>
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo"><span class="mdl-navigation__link white">Made with <i class="material-icons icon-left info-alert">favorite</i></span></div>
+                </div>
+                <div class="mdl-mini-footer__right-section">
+                    <ul class="mdl-mini-footer__link-list">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="about.html#contact">Contact us</a></li>
+                        <li><a href="" onclick="scroll(0,0);">Return to top</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</body>
+
 </html>
->>>>>>> Reverse
