@@ -25,12 +25,12 @@ div.demo-card-image {
   font-weight: 500;
 }
 
-/* Tier 1 Sponsors **/
+/* Tier 1 Sponsors */
 .sponsor-text {
-  position: absolute;
+  /*position: relative;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%); 
+  transform: translateX(-50%) translateY(-50%); */
 }
 
 .sponsor-bible {
@@ -53,8 +53,8 @@ div.demo-card-image {
   background-size: 95%;
 }
 
-.sponsor-alpha {
-  background: url('../resources/sponsors/alpha_centurion.jpg') center / cover;
+.sponsor-ac {
+  background: url('../resources/sponsors/ac.jpg') center / cover;
   background-size: 95%;
 }
 
@@ -138,8 +138,8 @@ div.demo-card-image {
   background-size: 95%;   
 }
 
-.sponsor-north {
-  background: url('../resources/sponsors/athletics_gauteng_north.jpg') center / cover;
+.sponsor-agn {
+  background: url('../resources/sponsors/agn.jpg') center / cover;
   background-size: 95%;   
 }
 
