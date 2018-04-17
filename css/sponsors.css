@@ -48,8 +48,8 @@ div.demo-card-image {
   background-size: 95%;
 }
 
-.sponsor-rockets {
-  background: url('../resources/sponsors/rockets.jpg') center / cover;
+.sponsor-litespeed {
+  background: url('../resources/sponsors/litespeed.jpg') center / cover;
   background-size: 95%;
 }
 
@@ -83,18 +83,8 @@ div.demo-card-image {
   background-size: 70%;
 }
 
-.sponsor-grb2 {
-  background: url('../resources/sponsors/grb_and_associates.jpg') center / cover;
-  background-size: 70%;    
-}
-
 .sponsor-aquelle {
   background: url('../resources/sponsors/aquelle.jpg') center / cover;
-  background-size: 95%;
-}
-
-.sponsor-cansa {
-  background: url('../resources/sponsors/cansa_active.jpg') center / cover;
   background-size: 95%;
 }
 
@@ -128,11 +118,6 @@ div.demo-card-image {
   background-size: 95%;   
 }
 
-.sponsor-zeroplus {
-  background: url('../resources/sponsors/zeroplus.jpg') center / cover;
-  background-size: 95%;    
-}
-
 .sponsor-jaycee {
   background: url('../resources/sponsors/jaycee.jpg') center / cover;
   background-size: 95%;   
@@ -150,10 +135,5 @@ div.demo-card-image {
 
 .sponsor-top {
   background: url('../resources/sponsors/top_net.jpg') center / cover;
-  background-size: 95%
-}
-
-.sponsor-wilger {
-  background: url('../resources/sponsors/wilger_guesthouse.jpg') center / cover;
   background-size: 95%
 }
