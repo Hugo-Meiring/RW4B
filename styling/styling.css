@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'your_iconsregular';
+    src: url('../logo/b-bibleLogo.eot');
+    src: url('../logo/b-bibleLogo.eot?#iefix') format('embedded-opentype'),
+         url('../logo/b-bibleLogo.woff2') format('woff2'),
+         url('../logo/b-bibleLogo.woff') format('woff'),
+         url('../logo/b-bibleLogo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#b {
+	font-family: 'your_iconsregular'; 
+	font-size:40px;
+}
