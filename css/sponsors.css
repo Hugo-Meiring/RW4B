@@ -88,11 +88,6 @@ div.demo-card-image {
   background-size: 95%;
 }
 
-.sponsor-hoka {
-  background: url('../resources/sponsors/hoka_one_one.jpg') center / cover;
-  background-size: 95%;
-}
-
 .sponsor-sheq {
   background: url('../resources/sponsors/sheq_advance.jpg') center / cover;
   background-size: 70%;
@@ -136,4 +131,44 @@ div.demo-card-image {
 .sponsor-top {
   background: url('../resources/sponsors/top_net.jpg') center / cover;
   background-size: 95%
+}
+
+.sponsor-lewende-woord {
+  background: url('../resources/sponsors/lewende_woord.jpg') center / cover;
+  background-size: 95% 
+}
+
+.sponsor-hd {
+  background: url('../resources/sponsors/hd.jpg') center / cover;
+  background-size: 95% 
+}
+
+.sponsor-tuks {
+  background: url('../resources/sponsors/tuks.jpg') center / cover;
+  background-size: 95% 
+}
+
+.sponsor-spar-l {
+  background: url('../resources/sponsors/spar_l.jpg') center / cover;
+  background-size: 95% 
+}
+
+.sponsor-spar-m {
+  background: url('../resources/sponsors/spar_m.jpg') center / cover;
+  background-size: 95% 
+}
+
+.sponsor-spar-v {
+  background: url('../resources/sponsors/spar_v.jpg') center / cover;
+  background-size: 95% 
+}
+
+.sponsor-remax {
+  background: url('../resources/sponsors/remax.jpg') center / cover;
+  background-size: 95% 
+}
+
+.sponsor-decathlon {
+  background: url('../resources/sponsors/decathlon.jpg') center / cover;
+  background-size: 95% 
 }
