@@ -172,3 +172,13 @@ div.demo-card-image {
   background: url('../resources/sponsors/decathlon.jpg') center / cover;
   background-size: 95% 
 }
+
+.sponsor-kalenji {
+  background: url('../resources/sponsors/kalenji.jpg') center / cover;
+  background-size: 95% 
+}
+
+.sponsor-virgin-active {
+  background: url('../resources/sponsors/virgin_active.jpg') center / cover;
+  background-size: 95% 
+}
