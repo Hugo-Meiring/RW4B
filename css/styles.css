@@ -280,3 +280,29 @@ img.article-image {
 .table-bug {
   width: 95%;
 }
+
+#countdown {
+  background-color: #1c435d;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  display: flex;
+}
+
+#countdown-items {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+li {
+  display: inline-block;
+  font-size: 1.0em;
+  list-style-type: none;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  /* font-size: 4.5rem; */
+}

@@ -7,21 +7,25 @@
     <meta name="description" content="A portfolio template that uses Material Design Lite.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>RvN RW4B</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-light_blue.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <!-- Google Analytics Tracking -->
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-64513855-1', 'auto');
         ga('send', 'pageview');
     </script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 </head>
 
 <body>
@@ -41,11 +45,10 @@
                     <a class="mdl-navigation__link" href="goodwill.html">Goodwill</a>
                     <!--<a class="mdl-navigation__link" href="gallery.html">Gallery</a>-->
                     <a class="mdl-navigation__link" href="results.html">Results</a>
-                    <a class="mdl-navigation__link" href="https://www.facebook.com/Riana-van-Niekerk-RunWalk4Bibles-1781410785424678/" target="_blank" style="margin-left: -50px !important; position: relative;">
-                        <img 
-                            src="resources/logo/fb-logo.svg" 
-                            height="23px"
-                            width="23px"/>
+                    <a class="mdl-navigation__link"
+                        href="https://www.facebook.com/Riana-van-Niekerk-RunWalk4Bibles-1781410785424678/"
+                        target="_blank" style="margin-left: -50px !important; position: relative;">
+                        <img src="resources/logo/fb-logo.svg" height="23px" width="23px" />
                     </a>
                 </nav>
             </div>
@@ -58,11 +61,9 @@
                 <a class="mdl-navigation__link" href="goodwill.html">Goodwill</a>
                 <!--<a class="mdl-navigation__link" href="gallery.html">Gallery</a>-->
                 <a class="mdl-navigation__link" href="results.html">Results</a>
-                <a class="mdl-navigation__link" href="https://www.facebook.com/Riana-van-Niekerk-RunWalk4Bibles-1781410785424678/" target="_blank">
-                    <img 
-                        src="resources/logo/fb-logo.svg" 
-                        height="20px"
-                        width="20px"/>
+                <a class="mdl-navigation__link"
+                    href="https://www.facebook.com/Riana-van-Niekerk-RunWalk4Bibles-1781410785424678/" target="_blank">
+                    <img src="resources/logo/fb-logo.svg" height="20px" width="20px" />
                 </a>
             </nav>
         </div>
@@ -70,6 +71,16 @@
         <!-- Content -->
         <main class="mdl-layout__content">
             <div class="mdl-grid portfolio-max-width">
+
+                <!-- Count Down Timer -->
+                <div id="countdown" class="container">
+                    <ul id="countdown-items">
+                        <li><span id="days"></span>days</li>
+                        <li><span id="hours"></span>Hours</li>
+                        <li><span id="minutes"></span>Minutes</li>
+                        <li><span id="seconds"></span>Seconds</li>
+                    </ul>
+                </div>
 
                 <!-- Main card -->
                 <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
@@ -86,32 +97,39 @@
                         </h4>
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="about.html">About race</a>
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent"
+                            href="about.html">About race</a>
                     </div>
                 </div>
 
                 <!-- Announcement card -->
                 <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
                     <div class="mdl-card__media">
-                        <img class="article-image" src="resources/cards/registration_card.jpg" border="0" alt="">
+                        <img class="article-image" src="resources/cards/two_oceans.jpg" border="0" alt="">
                     </div>
                     <div class="mdl-card__title">
                         <h2 class="mdl-card__title-text" style="margin-bottom: 30px;">Announcements</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        Register now @ <a target="_blank" href="https://www.active.com/centurion/running/distance-running-races/run-and-walk-4-bibles-2019">Enter online</a><br/><br/>
-                        <span class="mdl-navigation__link"><i class="material-icons info-alert icon-left">favorite_border</i>70+, Blind Runners and Wheel Chair Athletes FREE entry on 30 November only</span> <br/>
-                        <br/>
+                        Register now @ <a target="_blank"
+                            href="https://www.active.com/centurion/running/distance-running-races/run-and-walk-4-bibles-2019">Enter
+                            online</a><br /><br />
+                        <span class="mdl-navigation__link"><i
+                                class="material-icons info-alert icon-left">favorite_border</i>70+, Blind Runners and
+                            Wheel Chair Athletes FREE entry on 30 November only</span> <br />
+                        <br />
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="results.html">See results</a>
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent"
+                            href="results.html">See results</a>
                     </div>
                 </div>
 
                 <!-- Location card -->
                 <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
                     <div class="mdl-card__media">
-                        <a href="https://www.google.co.za/maps/place/25%C2%B050'29.0%22S+28%C2%B010'04.8%22E/@-25.8413841,28.1658113,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-25.8413889!4d28.168?hl=en" target="_blank">
+                        <a href="https://www.google.co.za/maps/place/25%C2%B050'29.0%22S+28%C2%B010'04.8%22E/@-25.8413841,28.1658113,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-25.8413889!4d28.168?hl=en"
+                            target="_blank">
                             <img class="article-image" src="resources/cards/location_card.jpg" border="0" alt="">
                         </a>
                     </div>
@@ -120,10 +138,13 @@
                     </div>
                     <div class="mdl-card__supporting-text">
                         <p><strong> Place: </strong> Lewende Woord Centurion </p>
-						<p><strong> Location: </strong> 213 Adam Tas Street, Clubview </p>
+                        <p><strong> Location: </strong> 213 Adam Tas Street, Clubview </p>
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" target="_blank" href="https://www.google.co.za/maps/place/25%C2%B050'29.0%22S+28%C2%B010'04.8%22E/@-25.8413841,28.1658113,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-25.8413889!4d28.168?hl=en">Open maps</a>
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent"
+                            target="_blank"
+                            href="https://www.google.co.za/maps/place/25%C2%B050'29.0%22S+28%C2%B010'04.8%22E/@-25.8413841,28.1658113,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-25.8413889!4d28.168?hl=en">Open
+                            maps</a>
                     </div>
                 </div>
 
@@ -154,44 +175,49 @@
                     </div>
                     <div class="mdl-card__supporting-text">
                         <table class="mdl-data-table">
-                        <thead>
-                            <tr>
-                            <th class="mdl-data-table__cell--non-numeric">Race</th>
-                            <th class="mdl-data-table__cell--non-numeric">Starting</th>
-                            <th class="mdl-data-table__cell--non-numeric">Entry</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-							<tr>
-                            <td class="mdl-data-table__cell--non-numeric">42.2 km</td>
-                            <td class="mdl-data-table__cell--non-numeric">05:30</td>
-                            <td class="mdl-data-table__cell--non-numeric">R 150</td>
-                            </tr>
-                            <tr>
-                            <td class="mdl-data-table__cell--non-numeric">21.1 km</td>
-                            <td class="mdl-data-table__cell--non-numeric">06:00</td>
-                            <td class="mdl-data-table__cell--non-numeric">R 120</td>
-                            </tr>
-                            <tr>
-                            <td class="mdl-data-table__cell--non-numeric">10 km</td>
-                            <td class="mdl-data-table__cell--non-numeric">06:30</td>
-                            <td class="mdl-data-table__cell--non-numeric">R 90</td>
-                            </tr>
-                            <tr>
-                            <td class="mdl-data-table__cell--non-numeric">5 km</td>
-                            <td class="mdl-data-table__cell--non-numeric">06:35</td>
-                            <td class="mdl-data-table__cell--non-numeric">R 50</td>
-                            </tr>
-                        </tbody>
+                            <thead>
+                                <tr>
+                                    <th class="mdl-data-table__cell--non-numeric">Race</th>
+                                    <th class="mdl-data-table__cell--non-numeric">Starting</th>
+                                    <th class="mdl-data-table__cell--non-numeric">Entry</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric">42.2 km</td>
+                                    <td class="mdl-data-table__cell--non-numeric">05:30</td>
+                                    <td class="mdl-data-table__cell--non-numeric">R 150</td>
+                                </tr>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric">21.1 km</td>
+                                    <td class="mdl-data-table__cell--non-numeric">06:00</td>
+                                    <td class="mdl-data-table__cell--non-numeric">R 120</td>
+                                </tr>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric">10 km</td>
+                                    <td class="mdl-data-table__cell--non-numeric">06:30</td>
+                                    <td class="mdl-data-table__cell--non-numeric">R 90</td>
+                                </tr>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric">5 km</td>
+                                    <td class="mdl-data-table__cell--non-numeric">06:35</td>
+                                    <td class="mdl-data-table__cell--non-numeric">R 50</td>
+                                </tr>
+                            </tbody>
                         </table>
 
-                        <br/><br/>
-                        <span class="mdl-navigation__link info-notify"><i class="material-icons icon-left">info_outline</i> Temporary License: <br/>42.2 / 21.1 / 10 km - R 40</span> <br/>
-                        <span class="mdl-navigation__link">For more details & race rules please download the pamphlet below.</span> <br/>
+                        <br /><br />
+                        <span class="mdl-navigation__link info-notify"><i
+                                class="material-icons icon-left">info_outline</i> Temporary License: <br />42.2 / 21.1 /
+                            10 km - R 40</span> <br />
+                        <span class="mdl-navigation__link">For more details & race rules please download the pamphlet
+                            below.</span> <br />
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
                         <!-- Accent-colored raised button with ripple -->
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="resources/pdf/Run_Walk_for_Bibles_2019_Flyer.pdf" target="_blank">Pamphlet Download</a>
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent"
+                            href="resources/pdf/Run_Walk_for_Bibles_2019_Flyer.pdf" target="_blank">Pamphlet
+                            Download</a>
                         <!-- <a href="resources/pdf/Run_Walk_for_Bibles_2019_Flyer.pdf" download>
                             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
                             <span class="white">Pamphlet Download</span>
@@ -209,55 +235,71 @@
                         <h2 class="mdl-card__title-text">Entries</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        Pre-entries:  <br/>
+                        Pre-entries: <br />
                         <div style="margin-left: 10px">
-                            <a href="https://www.google.co.za/maps/place/Run+Away+Sport/@-25.7665812,28.2991573,17z/data=!3m1!4b1!4m5!3m4!1s0x1e9560835284a1fb:0x1245eb80249733a!8m2!3d-25.766586!4d28.301346?hl=en">
-                                <span class="mdl-navigation__link"><i class="material-icons left-icon info-details">room</i>Run-A-Way Sport</span><br/>
-							</a>
-							<a href="https://www.google.co.za/maps/place/The+Sweat+Shop+Dunkeld/@-26.1310932,28.0327703,17z/data=!3m1!4b1!4m5!3m4!1s0x1e950cbc123337d7:0x6b246527a32c6a17!8m2!3d-26.131098!4d28.034959?hl=en">
-                                <span class="mdl-navigation__link"><i class="material-icons left-icon info-details">room</i>Sweat Shop (Dunkeld West)</span><br/>
-							</a>
-                            <a href="https://www.google.co.za/maps/place/The+Sweat+Shop+Southdowns/@-25.8858569,28.2024354,17z/data=!3m1!4b1!4m5!3m4!1s0x1e9565e1ca51fbff:0xf743980758d7f219!8m2!3d-25.8858617!4d28.2046241?hl=en">
-                                <span class="mdl-navigation__link"><i class="material-icons left-icon info-details">room</i>Sweat Shop (Southdowns)</span><br/>
-							</a>
-							<a href="https://www.google.co.za/maps/place/kerksondermure/@-25.8603962,28.1749313,17z/data=!3m1!4b1!4m5!3m4!1s0x1e95644936270bb5:0x840bc8fe2f0f4141!8m2!3d-25.860401!4d28.17712?hl=en">
-                                <span class="mdl-navigation__link"><i class="material-icons left-icon info-details">room</i>kerksondermure</span><br/>
-							</a>
-							<a href="https://www.google.co.za/maps/place/Lewende+Woord+Centurion/@-25.8415135,28.1656856,17z/data=!3m1!4b1!4m5!3m4!1s0x1e95646152a7c92f:0xc9415720c6d6a4ff!8m2!3d-25.8415183!4d28.1678743?hl=en">
-                                <span class="mdl-navigation__link"><i class="material-icons left-icon info-details">room</i>Lewende Woord Centurion</span><br/>
+                            <a
+                                href="https://www.google.co.za/maps/place/Run+Away+Sport/@-25.7665812,28.2991573,17z/data=!3m1!4b1!4m5!3m4!1s0x1e9560835284a1fb:0x1245eb80249733a!8m2!3d-25.766586!4d28.301346?hl=en">
+                                <span class="mdl-navigation__link"><i
+                                        class="material-icons left-icon info-details">room</i>Run-A-Way
+                                    Sport</span><br />
                             </a>
-                            
+                            <a
+                                href="https://www.google.co.za/maps/place/The+Sweat+Shop+Dunkeld/@-26.1310932,28.0327703,17z/data=!3m1!4b1!4m5!3m4!1s0x1e950cbc123337d7:0x6b246527a32c6a17!8m2!3d-26.131098!4d28.034959?hl=en">
+                                <span class="mdl-navigation__link"><i
+                                        class="material-icons left-icon info-details">room</i>Sweat Shop (Dunkeld
+                                    West)</span><br />
+                            </a>
+                            <a
+                                href="https://www.google.co.za/maps/place/The+Sweat+Shop+Southdowns/@-25.8858569,28.2024354,17z/data=!3m1!4b1!4m5!3m4!1s0x1e9565e1ca51fbff:0xf743980758d7f219!8m2!3d-25.8858617!4d28.2046241?hl=en">
+                                <span class="mdl-navigation__link"><i
+                                        class="material-icons left-icon info-details">room</i>Sweat Shop
+                                    (Southdowns)</span><br />
+                            </a>
+                            <a
+                                href="https://www.google.co.za/maps/place/kerksondermure/@-25.8603962,28.1749313,17z/data=!3m1!4b1!4m5!3m4!1s0x1e95644936270bb5:0x840bc8fe2f0f4141!8m2!3d-25.860401!4d28.17712?hl=en">
+                                <span class="mdl-navigation__link"><i
+                                        class="material-icons left-icon info-details">room</i>kerksondermure</span><br />
+                            </a>
+                            <a
+                                href="https://www.google.co.za/maps/place/Lewende+Woord+Centurion/@-25.8415135,28.1656856,17z/data=!3m1!4b1!4m5!3m4!1s0x1e95646152a7c92f:0xc9415720c6d6a4ff!8m2!3d-25.8415183!4d28.1678743?hl=en">
+                                <span class="mdl-navigation__link"><i
+                                        class="material-icons left-icon info-details">room</i>Lewende Woord
+                                    Centurion</span><br />
+                            </a>
+
                             <p>Pre-Entries will be available for collection from 17th of October 2019</p>
                         </div>
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" target="_blank" href="https://www.active.com/centurion/running/distance-running-races/run-and-walk-4-bibles-2019">Enter online</a>
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent"
+                            target="_blank"
+                            href="https://www.active.com/centurion/running/distance-running-races/run-and-walk-4-bibles-2019">Enter
+                            online</a>
                     </div>
                 </div>
 
                 <!-- Race routes -->
                 <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
                     <div class="mdl-card__media">
-						<a href="maps.html">
-							<img class="article-image" src="resources/cards/map_card.jpg" border="0" alt="">
-						</a>
+                        <a href="maps.html">
+                            <img class="article-image" src="resources/cards/map_card.jpg" border="0" alt="">
+                        </a>
                     </div>
                     <div class="mdl-card__title">
                         <h2 class="mdl-card__title-text">Race route and parking</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
                         All the relevant information on the race routes, along with parking details.
-                        <br/></br>
-                        <b>⚠️ Please note, official routes will be added at the end of October 2019.</b>
-                        <!-- Find the official running routes for:<br/>
-                        <ul>
-                            <li>5 km</li>
-                            <li>10 km</li>
-                            <li>21.1 km</li>
-                        </ul> -->
-                   </div>
+                        Find the official running routes for:<br/><br/>
+                        
+                        5 km<br/>
+                        10 km<br/>
+                        21.1 km<br/>
+                        42.2 km<br/>
+                    </div>
                     <div class="mdl-card__actions mdl-card--border">
-						<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="maps.html">Checkout routes and parking</a>
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent"
+                            href="maps.html">Checkout routes and parking</a>
                     </div>
                 </div>
 
@@ -270,11 +312,13 @@
                         <h2 class="mdl-card__title-text">Friends of RvN RW4B</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        Meet the friendly sponsors and friends who make this amazing race possible. Without them the race would never happen.
-                        <br/><br/><br/>
+                        Meet the friendly sponsors and friends who make this amazing race possible. Without them the
+                        race would never happen.
+                        <br /><br /><br />
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="friends.html">Find out more</a>
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent"
+                            href="friends.html">Find out more</a>
                     </div>
                 </div>
 
@@ -296,10 +340,11 @@
                 </div> -->
 
             </div>
-            <br/><br/><br/>
+            <br /><br /><br />
             <footer class="mdl-mini-footer">
                 <div class="mdl-mini-footer__left-section">
-                    <div class="mdl-logo"><span class="mdl-navigation__link white">Made with <i class="material-icons icon-left info-alert">favorite</i></span></div>
+                    <div class="mdl-logo"><span class="mdl-navigation__link white">Made with <i
+                                class="material-icons icon-left info-alert">favorite</i></span></div>
                 </div>
                 <div class="mdl-mini-footer__right-section">
                     <ul class="mdl-mini-footer__link-list">
@@ -311,7 +356,31 @@
             </footer>
         </main>
     </div>
-    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script>
+        const second = 1000,
+            minute = second * 60,
+            hour = minute * 60,
+            day = hour * 24;
+
+        let countDown = new Date('Nov 30, 2019 05:30:00').getTime(),
+            x = setInterval(function () {
+
+                let now = new Date().getTime(),
+                    distance = countDown - now;
+
+                document.getElementById('days').innerText = Math.floor(distance / (day)),
+                    document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
+                    document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+                    document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
+
+                //do something later when date is reached
+                //if (distance < 0) {
+                //  clearInterval(x);
+                //  'IT'S MY BIRTHDAY!;
+                //}
+
+            }, second)
+    </script>
 </body>
 
 </html>
